@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
+using Unity.Cinemachine; // Updated namespace
 
 public class GameManager : MonoBehaviour
 {
@@ -16,11 +16,11 @@ public class GameManager : MonoBehaviour
 
     private bool respawn;
 
-    private CinemachineVirtualCamera CVC;
+    private CinemachineCamera CVC;
 
     private void Start()
     {
-        CVC = GameObject.Find("Player Camera").GetComponent<CinemachineVirtualCamera>();
+        CVC = GameObject.Find("Player Camera").GetComponent<CinemachineCamera>();
     }
 
     private void Update()
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
         if(Time.time >= respawnTimeStart + respawnTime && respawn)
         {
             var playerTemp = Instantiate(player, respawnPoint);
-            CVC.m_Follow = playerTemp.transform;
+            CVC.Follow = playerTemp.transform;
             respawn = false;
         }
     }
