@@ -1,0 +1,7 @@
+Controlls:
+A - Left / Grab Ledge / Climb Up / Slide on Wall
+D - Right / Grab Ledge / Climb Up / Slide on Wall
+S - Crouch / Drop Down
+SPACE - Jump / Wall Jump
+MOUSE - Aim
+L_SHIFT - Dash
